@@ -1,12 +1,11 @@
 /*---------------------------------------- Colors */
 :root {
-    --soft-blue: hsl(215, 51%, 70%);
-    --cyan: hsl(178, 100%, 50%);
-    --cyan-hover: hsla(178, 100%, 50%, 0.5);
-    --main-bg: hsl(217, 54%, 11%);
-    --card-bg: hsl(216, 50%, 16%);
-    --line: hsl(215, 32%, 27%);
-    --white: hsl(0, 0%, 100%);
+    --white: hsl(225, 100%, 98%);
+    --light-blue: hsl(225, 100%, 94%);
+    --gray: hsl(224, 23%, 55%);
+    --purple: hsl(245, 83%, 68%);
+    --blue: hsl(245, 75%, 52%);
+    --dark-blue: hsl(223, 47%, 23%);
 }
 
 /*---------------------------------------- Global styling */
@@ -16,43 +15,31 @@
 }
 
 html {
-    font-family: 'Outfit', sans-serif;;
-    font-size: 18px;
-    color: var(--white);
+    font-family: 'Red Hat Display', sans-serif;;
 }
 
 body {
-    background-color: var(--main-bg);
+    background-color: var(--light-blue);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-}
-
-a {
-    text-decoration: none;
-    color: var(--white);
-}
-
-a:hover {
-    color: var(--cyan) !important;
-    cursor: pointer;
+    color: ;
 }
 
 /*---------------------------------------- Frontend Mentor Credits styling */
 .attribution {
-    font-family: Outfit, sans-serif;
-    font-size: 0.9375rem;
-    line-height: 1.25;
+    color: var(--dark-blue);
     text-align: center;
-    color: var(--white);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 25px;
+    align-self: flex-end;
+    margin-bottom: 2rem;
 }
 
 .attribution a {
-    color: var(--soft-blue);
+    color: inherit;
+}
+
+.attribution a:hover {
+    color: var(--purple);
     text-decoration: none;
 }
