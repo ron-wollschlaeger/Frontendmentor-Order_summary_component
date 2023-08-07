@@ -1,11 +1,13 @@
 /*---------------------------------------- Colors */
 :root {
     --white: hsl(225, 100%, 98%);
+    --light-gray: hsl(230, 75%, 98%);
     --light-blue: hsl(225, 100%, 94%);
     --gray: hsl(224, 23%, 55%);
     --purple: hsl(245, 83%, 68%);
     --blue: hsl(245, 75%, 52%);
     --dark-blue: hsl(223, 47%, 23%);
+
 }
 
 /*---------------------------------------- Global styling */
@@ -20,17 +22,48 @@ html {
 
 body {
     background-color: var(--light-blue);
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--dark-blue);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
+p {
+    color: var(--gray);
+}
+
+img {
+    max-height: auto;
+    max-width: 100%;
+}
+
+/*---------------------------------------- Card styling */
+.order-card {
+    background-color: var(--white);
+    width: 18.125rem;
+    height: 28.125rem;
+    border-radius: .8rem;
+    overflow: hidden;
+    box-shadow: 0 0.1875rem 0.625rem hsl;
+}
+
+.order-card__header {
+    height: 8.75rem;
+}
+
+.order-card__content {
+}
+
 /*---------------------------------------- Frontend Mentor Credits styling */
 .attribution {
     color: var(--dark-blue);
     text-align: center;
-    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
     margin-bottom: 2rem;
 }
 
