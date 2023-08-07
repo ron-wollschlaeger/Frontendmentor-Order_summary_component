@@ -22,7 +22,7 @@ html {
 
 body {
     background-color: var(--light-blue);
-    background-image: url(/images/pattern-background-desktop.svg);
+    background-image: url(./images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
     background-size: contain;
     color: var(--dark-blue);
