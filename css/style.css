@@ -4,7 +4,8 @@
     --light-gray: hsl(225, 100%, 96%);
     --light-blue: hsl(225, 100%, 94%);
     --gray: hsl(224, 23%, 55%);
-    --purple: hsl(245, 83%, 58%);
+    --purple: hsl(245, 60%, 61%);
+    --purple-shadow: hsla(245, 83%, 58%, 0.5);
     --blue: hsl(245, 75%, 52%);
     --dark-blue: hsl(223, 47%, 23%);
 
@@ -32,6 +33,12 @@ body {
     min-height: 100vh;
 }
 
+@media (max-width: 1440px) {
+    body {
+    background-image: url(../images/pattern-background-mobile.svg);
+    }
+}
+
 p {
     color: var(--gray);
 }
@@ -57,21 +64,22 @@ button {
 }
 
 .order-card__header {
-    height: 8.75rem;
+    max-height: 8.75rem;
 }
 
 .order-card__content {
-    height: 19.375rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 2.5rem;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 2rem;
+    height: 19.375rem;
 }
 
 .order-card__title {
     font-size: 1.2rem;
     font-weight: 900;
-    margin-bottom: .8rem;
 }
 
 .order-card__text {
@@ -83,17 +91,16 @@ button {
 .order-card__plan {
     width: 100%;
     background-color: var(--light-gray);
-    padding: .5rem 1rem;
-    margin: 1.2rem;
     border-radius: .8rem;
     display: grid;
     grid-template: 1fr / 1fr 3fr 1fr;
     align-items: center;
-    
+    padding: .5rem 1rem;
+    box-sizing: border-box;
 }
 
 .order-card__plan > img {
-    height: 70%;
+    height: 75%;
     width: auto;
 }
 
@@ -113,14 +120,36 @@ button {
     text-decoration: underline;
 }
 
+.order-card__plan > button:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .order-card__button--proceed {
     width: 100%;
-    background-color: var(--purple);
+    background-color: var(--blue);
     color: var(--white);
-    padding: .5rem 1rem;
     border-radius: .4rem;
-    box-shadow: 0 3px 10px var(--purple);
-    margin-bottom: 1.2rem;
+    box-shadow: 0 3px 10px var(--purple-shadow);
+    font-size: .6rem;
+    font-weight: 900;
+    padding: .7rem 0;
+}
+
+.order-card__button--proceed:hover {
+    background-color: var(--purple);
+    cursor: pointer;
+}
+
+.order-card__button--cancel {
+    color: var(--gray);
+    font-weight: 700;
+    font-size: .6rem;
+}
+
+.order-card__button--cancel:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
 }
 
 /*---------------------------------------- Frontend Mentor Credits styling */
